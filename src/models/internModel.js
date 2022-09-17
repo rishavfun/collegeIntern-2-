@@ -17,7 +17,7 @@ email :{
     trim: true
 },
 mobile :{
-    type : Number,
+    type : String,
     required : "Mobile Number is required",
     unique : true,
 },

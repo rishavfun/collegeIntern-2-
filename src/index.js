@@ -6,7 +6,7 @@ const route = require("./routes/route")
 
 
 app.use(bodyParser.json())
-//app.use(bodyParser.urlencoded({extended:true}))
+app.use(bodyParser.urlencoded({extended:true}))
 
 mongoose.connect(
     "mongodb+srv://Parshant_rao:C4fIOvHGi74DVINv@newcluster.squkrr6.mongodb.net/InternGroup43",

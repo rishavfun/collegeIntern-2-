@@ -50,7 +50,7 @@ const internValidation = async (req, res, next) => {
       return res
         .status(400)
         .send({ status: false, msg: "Please Input Mobile Number" });
-    if (typeof mobile !== "number" || mobile.length == 0)
+    if (typeof mobile !== "string" || mobile.length == 0)
       return res
         .status(400)
         .send({ status: false, msg: "Please Input Valid Number" });

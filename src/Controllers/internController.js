@@ -6,7 +6,7 @@ const internModel = require("../models/internModel")
 const createIntern = async (req, res) => {
   try {
     let data = req.body;
-    let { name, email, mobile, collegeName } = data;
+    let { collegeName } = data;
 //=================== DB Call ========================================================================================================
   // Check for collegeName is valid or not
     //data = { name, email, mobile, collegeName }
