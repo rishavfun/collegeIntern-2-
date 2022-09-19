@@ -75,6 +75,9 @@ const CreateCollege = async function (req, res) {
 
 //==================================College Details API==========================================//
 
+
+
+
 const collegeDetails = async function(req,res){
   try{
      /// Check if query param is given or not

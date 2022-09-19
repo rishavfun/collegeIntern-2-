@@ -56,7 +56,7 @@ const internValidation = async (req, res, next) => {
         .send({ status: false, msg: "Please Input Valid Number" });
 
  //------------------------------Mobile Validation Through REGEX ------------------------------------------------------------------------
-
+    mobile=mobile.trim()
      if (!/^[6-9]\d{9}$/.test(mobile))
      return res
        .status(400)
