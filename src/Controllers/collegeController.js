@@ -1,9 +1,11 @@
 const collegeModel = require("../models/collegeModel");
 const internModel = require("../models/internModel")
 const urlRegex = /(https?:\/\/.*\.(?:png|jpg))/;
+ //  /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()!@:%_\+.~#?&\/\/=]*)/
 
 //================Create College API===============================================//
 const CreateCollege = async function (req, res) {
+  res.setHeader('Access-Control-Allow-Origin','*')
   try {
   
     let { name, fullName, logoLink } = req.body;
@@ -79,7 +81,9 @@ const CreateCollege = async function (req, res) {
 
 
 const collegeDetails = async function(req,res){
+  res.setHeader('Access-Control-Allow-Origin','*')
   try{
+    
      /// Check if query param is given or not
      if(Object.keys(req.query).length==0){
       res.status(400).send({status:false,msg:"Pls give query param"})

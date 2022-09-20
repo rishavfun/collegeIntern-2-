@@ -3,10 +3,12 @@ const bodyParser = require("body-parser")
 const app = express()
 const mongoose = require("mongoose")
 const route = require("./routes/route")
+const multer=require("multer")
 
 
 app.use(bodyParser.json())
-//app.use(bodyParser.urlencoded({extended:true}))
+app.use(multer().any())
+
 
 mongoose.connect(
     "mongodb+srv://Parshant_rao:C4fIOvHGi74DVINv@newcluster.squkrr6.mongodb.net/InternGroup43",
