@@ -109,6 +109,7 @@ const collegeDetails = async function(req,res){
       }
 
       /// Check if given collegeName is valid or not
+      
       const collegeNameFromQuery = req.query.collegeName
       let college = await collegeModel.findOne({name:collegeNameFromQuery}).select({_id:0, name:1, fullName:1, logoLink:1})
       if(!college){

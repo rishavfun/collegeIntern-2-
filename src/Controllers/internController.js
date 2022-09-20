@@ -7,7 +7,7 @@ const createIntern = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin','*')
   try {
     let data = req.body;
-    let { name, email, mobile, collegeName } = data;
+    let { collegeName } = data;
 //=================== DB Call ========================================================================================================
   // Check for collegeName is valid or not
     //data = { name, email, mobile, collegeName }
