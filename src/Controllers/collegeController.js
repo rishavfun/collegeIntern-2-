@@ -92,7 +92,8 @@ const collegeDetails = async function(req,res){
 
 
      /// Check for valid query Params
-      let reqParamArray = ["collegeName"]
+      let reqParamArray = ["collegeName"]  
+      // console.log(reqParamArray);
       for(let key in req.query){
           if(!reqParamArray.includes(key)){
               res.status(400).send({status:false, msg:`query parameters can be only - ${reqParamArray.join(",")}`})
@@ -119,6 +120,7 @@ const collegeDetails = async function(req,res){
 
       //Geeting collegeId
       let collegeIdObj = await collegeModel.findOne({name:collegeNameFromQuery}).select()
+      // console.log(collegeIdObj);
 
       const collegeId = collegeIdObj._id
 
@@ -134,7 +136,7 @@ const collegeDetails = async function(req,res){
           res.status(200).send({status:true, data:college})
       }
 
-      college.interns=internDetails
+      college.interns=internDetails   // to use this line we have to do deep cpoy
 
       res.status(200).send({ data:college})
   }

@@ -3,7 +3,7 @@ const express = require("express")
 const router = express.Router()
 const collegeController = require("../Controllers/collegeController")
 const internController= require("../Controllers/internController")
-const validation =require("../validation/valid")
+const validation =require("../validation/valid")  
 
 router.get("/test", function(req,res){
     res.send("Connected")
